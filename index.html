@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <main>
+    <h1>Générateur de mot de passe</h1>
+    <form>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="inclureChiffre" id="inclureChiffre" checked>
+        <label class="form-check-label" for="inclureChiffre">
+          Inclure Des Chiffres <span>[ 0 1 2 3 4 5 6 7 8 9 ]</span>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="inclureMinuscule" id="inclureMinuscule" checked>
+        <label class="form-check-label" for="inclureMinuscule">
+          Inclure Des Minuscules <span>[ a b c d e f g h ... x y z ]</span>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="inclureMajuscule" id="inclureMajuscule" checked>
+        <label class="form-check-label" for="inclureMajuscule">
+          Inclure Des Majuscules <span>[ A B C D E F G H ... X Y Z ]</span>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="inclureCharSpeciaux" id="inclureCharSpeciaux" checked>
+        <label class="form-check-label" for="inclureCharSpeciaux">
+          Inclure Des Caractères Spéciaux <span>[ ~ @ # $ % ^ & * ( ) - _ [ ] { } \<> / ]</span>
+        </label>
+      </div>
+      <div class="pwdOption">
+
+        <select name="gdmdp_pwd_length" id="pwdLength" class="pwdSelect form-select"
+          aria-label="Default select example">
+          <option value="8" selected="selected">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+          <option value="33">33</option>
+          <option value="34">34</option>
+          <option value="35">35</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+          <option value="50">50</option>
+        </select>
+        <label for="pwdLength">Nombre de caractères</label>
+      </div>
+
+      <div class="input-group">
+        <input value="Motdepasse" type="text" class="form-control">
+        <span title="copier dans le presse papier" class="input-group-text"><i class="ri-clipboard-line"></i></span>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Générer mot de passe">
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
