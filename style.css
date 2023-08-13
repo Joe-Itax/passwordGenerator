@@ -35,6 +35,18 @@ form {
   padding: 1rem;
 }
 
+form .form-check input[type="checkbox"] {
+  cursor: pointer;
+}
+
+form input[type="checkbox"]:checked~label {
+  color: #5454f2;
+}
+
+form .form-check label {
+  cursor: pointer;
+}
+
 form .pwdOption {
   display: inline-flex;
   align-items: center;
