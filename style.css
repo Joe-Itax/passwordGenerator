@@ -69,6 +69,11 @@ form .pwdSelect {
   color: red;
 }
 
+div.input-outPutPwd {
+  transition: all 5s ease-in-out;
+  display: none;
+}
+
 
 @media (max-width: 800px) {
   body {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>password generator</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -42,8 +42,7 @@
       </div>
       <div class="pwdOption">
 
-        <select name="gdmdp_pwd_length" id="pwdLength" class="pwdSelect form-select"
-          aria-label="Default select example">
+        <select name="gdmdp_pwd_length" id="pwdLength" class="pwdSelect form-select">
           <option value="8" selected="selected">8</option>
           <option value="9">9</option>
           <option value="10">10</option>
@@ -91,11 +90,12 @@
         <label for="pwdLength">Nombre de caractères</label>
       </div>
 
-      <div class="input-group">
-        <input spellcheck="false" value="Motdepasse" type="text" class="form-control">
-        <span title="copier dans le presse papier" class="input-group-text"><i class="ri-clipboard-line"></i></span>
+      <div class="input-group input-outPutPwd">
+        <input readonly id="outPutPwd" spellcheck="false" value="" type="text" class="form-control">
+        <span id="copyPwd" title="copier dans le presse papier" class="input-group-text"><i
+            class="ri-clipboard-line"></i></span>
       </div>
-      <input type="submit" class="btn btn-primary" value="Générer mot de passe">
+      <input id="generatedPwd" type="submit" class="btn btn-primary" value="Générer mot de passe">
     </form>
   </main>
   <script src="script.js"></script>
