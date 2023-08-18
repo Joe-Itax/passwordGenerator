@@ -31,6 +31,7 @@ function passwordGenerated() {
   includeSpecial ? possiblePwd += _includeSpecial : possiblePwd += '';
   includeNumber ? possiblePwd += _includeNumber : possiblePwd += '';
 
+  const regExpNumber = /[0-9]/;
   let password = '';
   for (let i = 0; i < pwdLength.value; i++) {
     password += possiblePwd.charAt(
@@ -49,7 +50,7 @@ function copyToClipboard() {
 }
 
 copyPwd.addEventListener("click", copyToClipboard);
-generatedPwd.addEventListener("click", function(e) {
-  e.preventDefault();
+generatedPwd.addEventListener("click", function(event) {
+  event.preventDefault();
   passwordGenerated();
 });
