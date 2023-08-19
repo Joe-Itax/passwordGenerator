@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>password generator</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="mot-de-passe.png" rel="icon" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -38,6 +39,12 @@
         <input class="form-check-input" type="checkbox" value="inclureCharSpeciaux" id="inclureCharSpeciaux" checked>
         <label class="form-check-label" for="inclureCharSpeciaux">
           Inclure Des Caractères Spéciaux
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="exclureCharSimilar" id="exclureCharSimilar" checked>
+        <label class="form-check-label" for="exclureCharSimilar">
+          Exclure les caractères similaires <code>[o O 0 | 1 l I]</code> 
         </label>
       </div>
       <div class="pwdOption">
