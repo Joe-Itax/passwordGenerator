@@ -31,17 +31,24 @@ function passwordGenerated() {
   includeSpecial ? possiblePwd += _includeSpecial : possiblePwd += '';
   includeNumber ? possiblePwd += _includeNumber : possiblePwd += '';
 
-  const regExpNumber = /[0-9]/;
+  const regExpNumber = includeNumber ? /[0-9]/ : null;
+  const regExpUpper = includeUpper ? /[A-Z]/ : null;
+  const regExpLower = includeLower ? /[a-z]/ : null;
+  const regExpSpecialChar = includeSpecial ? /[$*!:;,?.\/§%£ø*\\#~@{}\[\]\`|^+)(=&]/ : null;
+  // _includeNumber ? regExpNumber = /[0-9]/ : regExpNumber = '';
   let password = '';
-  for (let i = 0; i < pwdLength.value; i++) {
-    password += possiblePwd.charAt(
-      Math.floor(Math.random() * possiblePwd.length)
-    );
-  }
+  do {
+    password = "";
+    for (let i = 0; i < pwdLength.value; i++) {
+      password += possiblePwd.charAt(
+        Math.floor(Math.random() * possiblePwd.length)
+      );
+    }
+    console.log(password);
+  } while ((regExpNumber !== null && !regExpNumber.test(password)) || (regExpUpper !== null && !regExpUpper.test(password)) || (regExpLower !== null && !regExpLower.test(password)) || (regExpSpecialChar !== null && !regExpSpecialChar.test(password)));
   inputOutput.style.display = 'inherit';
   outPutPwd.value = password;
 }
-
 
 //Fonction pour copier le code dans le presse papier
 function copyToClipboard() {
